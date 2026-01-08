@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Angel Reeves | Personal Journey</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
             --black: #1a1a1a;
@@ -13,17 +14,24 @@
             --white: #ffffff;
         }
 
+        * { box-sizing: border-box; }
+
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
+            padding: 0;
             color: var(--dark-gray);
             background-color: var(--gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         nav {
             position: sticky;
             top: 0;
+            width: 100%;
             background: var(--black);
             padding: 15px 0;
             text-align: center;
@@ -41,16 +49,37 @@
         }
 
         header {
+            width: 100%;
             background: var(--black);
             color: var(--white);
-            padding: 4rem 1rem;
+            padding: 5rem 1rem 7rem 1rem;
             text-align: center;
         }
 
-        header h1 { font-size: 2.5rem; margin: 0; text-transform: uppercase; letter-spacing: 2px; }
-        header p { color: var(--baby-blue); font-weight: bold; margin-top: 10px; }
+        .container { 
+            width: 100%;
+            max-width: 850px; 
+            margin: 0 auto; 
+            padding: 0 20px; 
+        }
 
-        .container { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        .profile-img-container {
+            width: 200px;
+            height: 200px;
+            margin: -100px auto 30px;
+            position: relative;
+            z-index: 5;
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            background: #ddd;
+            border-radius: 50%;
+            border: 8px solid var(--white);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            object-fit: cover;
+        }
 
         section {
             background: var(--white);
@@ -63,102 +92,115 @@
         h2 { 
             color: var(--black); 
             text-transform: uppercase;
-            border-left: 5px solid var(--baby-blue);
+            border-left: 6px solid var(--baby-blue);
             padding-left: 15px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
         .bio-content p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             margin-bottom: 20px;
-            line-height: 1.8;
+            color: #444;
+            text-align: justify;
         }
 
-        .grid-section {
+        /* Career Timeline Section */
+        .milestone-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
+            gap: 15px;
             margin-top: 20px;
         }
 
-        .card {
+        .milestone-card {
             background: var(--gray);
             padding: 20px;
             border-radius: 8px;
-            border-bottom: 3px solid var(--baby-blue);
+            border-left: 4px solid var(--black);
         }
 
-        .card h3 { margin-top: 0; font-size: 1rem; color: var(--black); text-transform: uppercase; }
+        .milestone-card h3 { margin: 0 0 10px 0; font-size: 1rem; color: var(--black); }
 
-        .values-list {
-            list-style: none;
-            padding: 0;
-        }
+        .btn-container { text-align: center; padding: 40px 0; }
 
-        .values-list li {
+        .btn-home {
+            display: inline-block;
+            padding: 18px 45px;
             background: var(--black);
-            color: white;
-            margin-bottom: 8px;
-            padding: 10px;
-            border-radius: 4px;
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
             font-weight: bold;
-            font-size: 0.9rem;
-            text-align: center;
+            text-transform: uppercase;
+            border: 2px solid var(--baby-blue);
+            transition: 0.3s;
         }
 
-        footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; }
+        .btn-home:hover { background: var(--baby-blue); color: var(--black); }
+
+        footer { width: 100%; text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="index.html">Main Portfolio</a>
-    <a href="index.html#record">Career Stats</a>
+    <a href="index.html">Home</a>
+    <a href="index.html#record">Stats</a>
     <a href="index.html#academics">Academics</a>
 </nav>
 
 <header>
-    <h1>The Story Behind the Mat</h1>
-    <p>Discipline. Observation. Architecture.</p>
+    <h1>Angel Reeves</h1>
+    <p>Architecture Student | Class of 2027 Prospect</p>
 </header>
 
 <div class="container">
     
-    <section>
-        <h2>The Tactical Mindset</h2>
-        <div class="bio-content">
-            <p>For me, wrestling and architecture are the same pursuit: <strong>the study of structure and leverage.</strong> I don't just "scramble"—I observe. I look for the technical flaw in a position and use it to my advantage. This methodical approach is what has allowed me to maintain a high winning percentage over 12 years of competition.</p>
-        </div>
-    </section>
-
-    <div class="grid-section">
-        <section class="card">
-            <h3>Leader in the Room</h3>
-            <p>As a veteran with over a decade of experience, I take pride in helping our freshman class with technical drills and weight management discipline. A strong room makes a strong individual.</p>
-        </section>
-
-        <section class="card">
-            <h3>Core Values</h3>
-            <ul class="values-list">
-                <li>UNMATCHED WORK ETHIC</li>
-                <li>COACHABILITY</li>
-                <li>STRUCTURAL THINKING</li>
-                <li>ACADEMIC RIGOR</li>
-            </ul>
-        </section>
+    <div class="profile-img-container">
+        <img src="profile.jpg" alt="Angel Reeves Profile" class="profile-img">
     </div>
 
     <section>
-        <h2>Personal Goals</h2>
+        <h2>My Story & Philosophy</h2>
         <div class="bio-content">
-            <p>My immediate focus is my <strong>accelerated graduation in 2027</strong>. Beyond that, I am seeking a university that offers a rigorous Architecture program and a wrestling culture that values technical growth and mental toughness. I am prepared to be the hardest worker in your room and your studio.</p>
+            <p>I have dedicated the last <strong>12 years</strong> of my life to the sport of wrestling. What began as a childhood passion has evolved into a disciplined pursuit of technical excellence. Throughout my journey, I have learned that success on the mat is not just about physical strength—it is about the ability to observe, analyze, and exploit structural weaknesses in an opponent's defense.</p>
+            
+            <p>This "tactical mindset" is exactly why I am pursuing a career in <strong>Architecture</strong>. I find a direct connection between the two: both require a deep understanding of balance, leverage, and the ability to build a winning plan from the ground up. Whether I am at a drafting table or in the center of the mat, my focus remains the same—precision and outworking the competition.</p>
+
+            <p>I am currently on an <strong>accelerated academic path</strong> to graduate in 2027. My goal is to find a collegiate program that values a high-IQ wrestler who is as committed to his architectural studies as he is to winning championships for his team.</p>
         </div>
     </section>
+
+    <section>
+        <h2>Career Highlights</h2>
+        <div class="milestone-grid">
+            <div class="milestone-card">
+                <h3>12 Years Experience</h3>
+                <p>Consistent training and competition since the age of 4, building a foundation of elite mat awareness.</p>
+            </div>
+            <div class="milestone-card">
+                <h3>253 Career Wins</h3>
+                <p>A proven track record of durability and high-level performance across over 300 matches.</p>
+            </div>
+            <div class="milestone-card">
+                <h3>Architecture Goals</h3>
+                <p>Currently studying CAD modeling and technical sketching to prepare for a professional design degree.</p>
+            </div>
+            <div class="milestone-card">
+                <h3>Class of 2027</h3>
+                <p>Early graduation candidate with a focus on jumping into collegiate competition and studio work.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn-home">← View My Full Stats & Academic Record</a>
+    </div>
 
 </div>
 
 <footer>
-    &copy; 2026 Angel Reeves Portfolio. All Rights Reserved.
+    &copy; 2026 Angel Reeves Portfolio. Prepared for Collegiate Recruitment.
 </footer>
 
 </body>
