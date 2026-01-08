@@ -98,28 +98,28 @@
         }
 
         .bio-content p {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             margin-bottom: 20px;
             color: #444;
-            text-align: justify;
         }
 
-        /* Career Timeline Section */
-        .milestone-grid {
+        /* Arsenal Grid */
+        .arsenal-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 20px;
         }
 
-        .milestone-card {
+        .arsenal-card {
             background: var(--gray);
-            padding: 20px;
+            padding: 15px;
             border-radius: 8px;
-            border-left: 4px solid var(--black);
+            text-align: center;
+            border-bottom: 3px solid var(--black);
         }
 
-        .milestone-card h3 { margin: 0 0 10px 0; font-size: 1rem; color: var(--black); }
+        .arsenal-card h3 { margin: 0; font-size: 0.9rem; color: var(--black); text-transform: uppercase; }
 
         .btn-container { text-align: center; padding: 40px 0; }
 
@@ -151,7 +151,7 @@
 
 <header>
     <h1>Angel Reeves</h1>
-    <p>Architecture Student | Class of 2027 Prospect</p>
+    <p>12-Year Veteran | Class of 2027 Prospect</p>
 </header>
 
 <div class="container">
@@ -161,40 +161,36 @@
     </div>
 
     <section>
-        <h2>My Story & Philosophy</h2>
+        <h2>The Journey: 12 Years on the Mat</h2>
         <div class="bio-content">
-            <p>I have dedicated the last <strong>12 years</strong> of my life to the sport of wrestling. What began as a childhood passion has evolved into a disciplined pursuit of technical excellence. Throughout my journey, I have learned that success on the mat is not just about physical strength—it is about the ability to observe, analyze, and exploit structural weaknesses in an opponent's defense.</p>
+            <p>Wrestling has been the defining constant in my life for over a decade. Starting at the age of 4, I have grown up in wrestling rooms, learning that success is earned through consistent, grueling work and technical discipline. With <strong>253 career wins</strong>, my experience has taught me how to remain composed in the third period and how to outmaneuver opponents through superior mat awareness.</p>
             
-            <p>This "tactical mindset" is exactly why I am pursuing a career in <strong>Architecture</strong>. I find a direct connection between the two: both require a deep understanding of balance, leverage, and the ability to build a winning plan from the ground up. Whether I am at a drafting table or in the center of the mat, my focus remains the same—precision and outworking the competition.</p>
+            <p>My style is built on being an <strong>observant and tactical competitor</strong>. I don't just rely on athleticism; I study movement and leverage to find the most efficient path to a takedown or a turn. I thrive in the scramble and take pride in my ability to stay one step ahead of the competition technically.</p>
 
-            <p>I am currently on an <strong>accelerated academic path</strong> to graduate in 2027. My goal is to find a collegiate program that values a high-IQ wrestler who is as committed to his architectural studies as he is to winning championships for his team.</p>
+            <p>Off the mat, I apply this same focus to my studies. I am currently on an <strong>accelerated path to graduate in 2027</strong>, demonstrating the same drive in the classroom that I show in training. I am looking for a college program that demands excellence and offers a culture of hard work and technical growth.</p>
         </div>
     </section>
 
     <section>
-        <h2>Career Highlights</h2>
-        <div class="milestone-grid">
-            <div class="milestone-card">
-                <h3>12 Years Experience</h3>
-                <p>Consistent training and competition since the age of 4, building a foundation of elite mat awareness.</p>
+        <h2>Technical Arsenal</h2>
+        <div class="arsenal-grid">
+            <div class="arsenal-card">
+                <h3>Counter-Offense</h3>
             </div>
-            <div class="milestone-card">
-                <h3>253 Career Wins</h3>
-                <p>A proven track record of durability and high-level performance across over 300 matches.</p>
+            <div class="arsenal-card">
+                <h3>Scramble Ability</h3>
             </div>
-            <div class="milestone-card">
-                <h3>Architecture Goals</h3>
-                <p>Currently studying CAD modeling and technical sketching to prepare for a professional design degree.</p>
+            <div class="arsenal-card">
+                <h3>Mat Awareness</h3>
             </div>
-            <div class="milestone-card">
-                <h3>Class of 2027</h3>
-                <p>Early graduation candidate with a focus on jumping into collegiate competition and studio work.</p>
+            <div class="arsenal-card">
+                <h3>Leg Riding</h3>
             </div>
         </div>
     </section>
 
     <div class="btn-container">
-        <a href="index.html" class="btn-home">← View My Full Stats & Academic Record</a>
+        <a href="index.html" class="btn-home">← Back to Career Stats</a>
     </div>
 
 </div>
