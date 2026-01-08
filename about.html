@@ -21,7 +21,6 @@
             background-color: var(--gray);
         }
 
-        /* Navigation */
         nav {
             position: sticky;
             top: 0;
@@ -41,12 +40,10 @@
             text-transform: uppercase;
         }
 
-        nav a:hover { color: var(--baby-blue); }
-
         header {
             background: var(--black);
             color: var(--white);
-            padding: 4rem 1rem 6rem 1rem;
+            padding: 4rem 1rem;
             text-align: center;
         }
 
@@ -71,93 +68,42 @@
             margin-bottom: 20px;
         }
 
-        /* Profile Image */
-        .profile-img-container {
-            width: 180px;
-            height: 180px;
-            margin: -90px auto 30px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .profile-img {
-            width: 100%;
-            height: 100%;
-            background: #ddd;
-            border-radius: 50%;
-            border: 6px solid var(--white);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-            object-fit: cover;
-        }
-
         .bio-content p {
             font-size: 1.1rem;
             margin-bottom: 20px;
+            line-height: 1.8;
         }
 
-        .training-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-        }
-
-        .training-list li {
-            background: var(--gray);
-            padding: 15px;
-            border-radius: 8px;
-            font-weight: bold;
-            border-bottom: 3px solid var(--baby-blue);
-        }
-
-        /* Architecture Gallery */
-        .drafting-gallery {
+        .grid-section {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
             margin-top: 20px;
         }
 
-        .draft-card {
+        .card {
             background: var(--gray);
+            padding: 20px;
             border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #ddd;
-            text-align: center;
+            border-bottom: 3px solid var(--baby-blue);
         }
 
-        .draft-img-placeholder {
-            height: 180px;
-            background: #e2e8f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #94a3b8;
-            font-weight: bold;
+        .card h3 { margin-top: 0; font-size: 1rem; color: var(--black); text-transform: uppercase; }
+
+        .values-list {
+            list-style: none;
+            padding: 0;
         }
 
-        /* Bottom Link Button */
-        .btn-home {
-            display: block;
-            width: fit-content;
-            margin: 40px auto;
-            padding: 15px 35px;
+        .values-list li {
             background: var(--black);
-            color: var(--white);
-            text-decoration: none;
-            border-radius: 8px;
+            color: white;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 4px;
             font-weight: bold;
-            text-transform: uppercase;
-            border: 2px solid var(--baby-blue);
-            transition: 0.3s ease;
+            font-size: 0.9rem;
             text-align: center;
-        }
-
-        .btn-home:hover {
-            background: var(--baby-blue);
-            color: var(--black);
-            transform: translateY(-3px);
         }
 
         footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; }
@@ -166,60 +112,53 @@
 <body>
 
 <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#record">Stats</a>
-    <a href="#gallery">Gallery</a>
+    <a href="index.html">Main Portfolio</a>
+    <a href="index.html#record">Career Stats</a>
     <a href="index.html#academics">Academics</a>
 </nav>
 
 <header>
-    <h1>Angel Reeves</h1>
-    <p>Accelerated Class of 2027</p>
+    <h1>The Story Behind the Mat</h1>
+    <p>Discipline. Observation. Architecture.</p>
 </header>
 
 <div class="container">
     
-    <div class="profile-img-container">
-        <img src="profile.jpg" alt="Angel Reeves" class="profile-img">
+    <section>
+        <h2>The Tactical Mindset</h2>
+        <div class="bio-content">
+            <p>For me, wrestling and architecture are the same pursuit: <strong>the study of structure and leverage.</strong> I don't just "scramble"—I observe. I look for the technical flaw in a position and use it to my advantage. This methodical approach is what has allowed me to maintain a high winning percentage over 12 years of competition.</p>
+        </div>
+    </section>
+
+    <div class="grid-section">
+        <section class="card">
+            <h3>Leader in the Room</h3>
+            <p>As a veteran with over a decade of experience, I take pride in helping our freshman class with technical drills and weight management discipline. A strong room makes a strong individual.</p>
+        </section>
+
+        <section class="card">
+            <h3>Core Values</h3>
+            <ul class="values-list">
+                <li>UNMATCHED WORK ETHIC</li>
+                <li>COACHABILITY</li>
+                <li>STRUCTURAL THINKING</li>
+                <li>ACADEMIC RIGOR</li>
+            </ul>
+        </section>
     </div>
 
     <section>
-        <h2>Tactical Mindset</h2>
+        <h2>Personal Goals</h2>
         <div class="bio-content">
-            <p>I have spent <strong>12 years</strong> on the wrestling mat. This sport has taught me that the best technical designs—whether in a match or in architecture—require a perfect foundation. I am a calculated wrestler who thrives on technical scrambles and out-studying my opponents.</p>
+            <p>My immediate focus is my <strong>accelerated graduation in 2027</strong>. Beyond that, I am seeking a university that offers a rigorous Architecture program and a wrestling culture that values technical growth and mental toughness. I am prepared to be the hardest worker in your room and your studio.</p>
         </div>
     </section>
-
-    <section>
-        <h2>Training & Style</h2>
-        <ul class="training-list">
-            <li>Style: Folkstyle / Freestyle</li>
-            <li>Focus: Counter-Wrestling</li>
-            <li>Status: Year-Round Competitor</li>
-            <li>Goal: Collegiate Athlete</li>
-        </ul>
-    </section>
-
-    <section id="gallery">
-        <h2>Architectural Vision</h2>
-        <div class="drafting-gallery">
-            <div class="draft-card">
-                <div class="draft-img-placeholder">SKETCH 1</div>
-                <div style="padding: 10px; font-weight: bold;">Hand Sketches</div>
-            </div>
-            <div class="draft-card">
-                <div class="draft-img-placeholder">DRAFT 2</div>
-                <div style="padding: 10px; font-weight: bold;">CAD Modeling</div>
-            </div>
-        </div>
-    </section>
-
-    <a href="index.html" class="btn-home">← Back to Recruiting Stats</a>
 
 </div>
 
 <footer>
-    &copy; 2026 Angel Reeves Portfolio.
+    &copy; 2026 Angel Reeves Portfolio. All Rights Reserved.
 </footer>
 
 </body>
