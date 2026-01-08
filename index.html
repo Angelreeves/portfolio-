@@ -42,7 +42,7 @@
             margin: 0;
             color: var(--dark-gray);
             background-color: var(--gray);
-            scroll-behavior: smooth; /* Makes the jumping look smooth */
+            scroll-behavior: smooth;
         }
 
         header {
@@ -71,6 +71,27 @@
             border-left: 5px solid var(--baby-blue);
             padding-left: 15px;
             font-size: 1.5rem;
+        }
+
+        /* Profile Button Styling */
+        .btn-profile {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--white);
+            color: var(--black);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid var(--black);
+            transition: all 0.3s ease;
+        }
+
+        .btn-profile:hover {
+            background-color: var(--black);
+            color: var(--white);
+            transform: translateY(-2px);
         }
 
         .stats-grid {
@@ -139,7 +160,7 @@
 <body>
 
 <nav>
-    <a href="#profile">Profile</a>
+    <a href="about.html">About Me</a>
     <a href="#schedule">Schedule</a>
     <a href="#record">Record</a>
     <a href="#architecture">Architecture</a>
@@ -161,6 +182,7 @@
             With nearly 12 years of experience on the mat, I bring technical 
             precision and mental toughness developed over a decade of competition. 
         </p>
+        <a href="about.html" class="btn-profile">Read My Full Journey →</a>
     </section>
 
     <section id="schedule">
