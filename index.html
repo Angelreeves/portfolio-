@@ -14,12 +14,35 @@
             --flo-red: #ff0000;
         }
 
+        /* Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: var(--black);
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            border-bottom: 2px solid var(--baby-blue);
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a:hover { color: var(--baby-blue); }
+
         body {
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             color: var(--dark-gray);
             background-color: var(--gray);
+            scroll-behavior: smooth; /* Makes the jumping look smooth */
         }
 
         header {
@@ -27,28 +50,12 @@
             color: var(--white);
             padding: 4rem 1rem;
             text-align: center;
-            border-bottom: 6px solid var(--baby-blue);
         }
 
-        header h1 {
-            font-size: 3rem;
-            margin: 0;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        header h1 { font-size: 3rem; margin: 0; letter-spacing: 2px; text-transform: uppercase; }
+        header p { font-size: 1.1rem; color: var(--baby-blue); font-weight: bold; margin-top: 10px; }
 
-        header p {
-            font-size: 1.1rem;
-            color: var(--baby-blue);
-            font-weight: bold;
-            margin-top: 10px;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
+        .container { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
 
         section {
             background: var(--white);
@@ -81,31 +88,23 @@
             border: 1px solid #ddd;
         }
 
-        .stat-card h3 { margin: 0; color: var(--dark-gray); font-size: 0.8rem; text-transform: uppercase; }
         .stat-card p { margin: 5px 0 0; font-size: 1.6rem; font-weight: bold; color: var(--black); }
 
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; 
-            height: 0;
-            overflow: hidden;
-            background: #000;
+        .video-placeholder, .portfolio-placeholder {
+            background: #e2e8f0;
+            border: 2px dashed #cbd5e1;
+            padding: 3rem;
+            text-align: center;
             border-radius: 8px;
+            color: #64748b;
+            font-weight: bold;
             margin-top: 1rem;
+            text-transform: uppercase;
         }
 
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        /* FloWrestling Button Styling */
         .btn-flo {
             display: inline-block;
-            margin-top: 20px;
+            margin: 10px;
             padding: 12px 24px;
             background-color: var(--black);
             color: var(--white);
@@ -115,28 +114,37 @@
             text-transform: uppercase;
             transition: all 0.3s ease;
             border: 2px solid var(--baby-blue);
+            font-size: 0.85rem;
         }
 
-        .btn-flo:hover {
-            background-color: var(--flo-red);
-            border-color: var(--white);
-            transform: scale(1.05);
-        }
+        .btn-flo:hover { background-color: var(--flo-red); border-color: var(--white); transform: scale(1.05); }
 
         .contact-info {
             background: var(--black);
             color: var(--white);
-            padding: 2rem;
+            padding: 3rem 2rem;
             border-radius: 12px;
             text-align: center;
         }
 
+        .contact-info h2 { color: var(--white); }
         .contact-info a { color: var(--baby-blue); text-decoration: none; font-weight: bold; }
 
         footer { text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; }
+
+        table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #eee; }
     </style>
 </head>
 <body>
+
+<nav>
+    <a href="#profile">Profile</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#record">Record</a>
+    <a href="#architecture">Architecture</a>
+    <a href="#academics">Academics</a>
+</nav>
 
 <header>
     <h1>ANGEL REEVES</h1>
@@ -152,81 +160,73 @@
             <strong>working toward an accelerated graduation next year</strong>. 
             With nearly 12 years of experience on the mat, I bring technical 
             precision and mental toughness developed over a decade of competition. 
-            I am an <strong>observant</strong> wrestler who studies opponents' patterns 
-            and adapts quickly. My goal is to study <strong>Architecture</strong> 
-            while competing at the collegiate level.
         </p>
+    </section>
+
+    <section id="schedule">
+        <h2>Upcoming Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>[Date]</td><td>[Tournament]</td><td>[City, State]</td></tr>
+            </tbody>
+        </table>
     </section>
 
     <section id="highlights">
         <h2>Match Highlights</h2>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen title="Wrestling Highlights"></iframe>
-        </div>
-        <p style="margin-top: 10px; font-size: 0.9rem; color: #666;">*If video does not load, contact me for the direct link to my latest match film.</p>
+        <div class="video-placeholder">NO HIGHLIGHT REEL MADE YET</div>
     </section>
 
     <section id="record">
         <h2>Career Match Record</h2> 
         <p style="font-size: 1.2rem; font-weight: bold;">Lifetime Record: 253-54</p>
         <div class="stats-grid">
-            <div class="stat-card">
-                <h3>Current Season</h3>
-                <p>2 - 2</p>
-            </div>
-            <div class="stat-card">
-                <h3>Pins</h3>
-                <p>00</p>
-            </div>
-            <div class="stat-card">
-                <h3>Weight Class</h3>
-                <p>132 lbs</p>
-            </div>
+            <div class="stat-card"><h3>Weight Class</h3><p>132 lbs</p></div>
+            <div class="stat-card"><h3>Exp</h3><p>12 Yrs</p></div>
         </div>
 
-        <div style="text-align: center;">
-            <a href="https://www.flowrestling.org/nextgen/people/10059646?tab=home" target="_blank" class="btn-flo">View FloWrestling Profile</a>
+        <div style="text-align: center; margin-top: 30px;">
+            <p style="font-weight: bold;">I have two different accounts:</p>
+            <a href="https://www.flowrestling.org/nextgen/people/10059646-angel-reeves-davis?tab=home" target="_blank" class="btn-flo">Account #1</a>
+            <a href="https://www.flowrestling.org/nextgen/people/10037471-angel-reeves?tab=home" target="_blank" class="btn-flo">Account #2</a>
         </div>
     </section>
 
-    <section id="achievements">
-        <h2>Key Achievements</h2>
-        <ul>
-            <li><strong>Multi-State Placer / Finalist:</strong> Consistent top-tier performance at the state level.</li>
-            <li><strong>12 Years Mat Experience:</strong> Dedicated year-round training since childhood.</li>
-            <li><strong>Styles:</strong> Proficient in Folkstyle, Freestyle, and Greco-Roman.</li>
-        </ul>
+    <section id="architecture">
+        <h2>Architecture Portfolio</h2>
+        <div class="portfolio-placeholder">Drafts Coming Soon</div>
+    </section>
+
+    <section id="coaching">
+        <h2>Coaching References</h2>
+        <p><strong>Head Coach:</strong> [Name] | <strong>Phone:</strong> [Phone]</p>
     </section>
 
     <section id="academics">
         <h2>Academic Excellence</h2>
         <div class="stats-grid">
-            <div class="stat-card">
-                <h3>Current GPA</h3>
-                <p>3.1</p>
-            </div>
-            <div class="stat-card">
-                <h3>Target GPA</h3>
-                <p>3.5</p>
-            </div>
-            <div class="stat-card">
-                <h3>Academic Goal</h3>
-                <p>Straight A's</p>
-            </div>
+            <div class="stat-card"><h3>GPA</h3><p>3.1</p></div>
+            <div class="stat-card"><h3>Goal</h3><p>Straight A's</p></div>
         </div>
-        <p><strong>Architecture Focus:</strong> Applying tactical observation and structural thinking to design and academics.</p>
     </section>
 
     <section class="contact-info">
         <h2>Ready for Recruitment</h2>
         <p>Email: <a href="mailto:angel.lee.reeves.12@gmail.com">angel.lee.reeves.12@gmail.com</a></p>
-        <p>Phone: <strong>360.216.9990</strong></p>
+        <p>Phone: 360.216.9990</p>
     </section>
 
 </div>
 
 <footer>
-    &copy; 2026 Angel Reeves Portfolio. Prepared for Collegiate Recruitment.
+    &copy; 2026 Angel Reeves Portfolio.
 </footer>
 
 </body>
