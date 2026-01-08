@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Angel Reeves | Personal Journey</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <style>
         :root {
             --black: #1a1a1a;
@@ -113,4 +114,52 @@
             font-size: 1.4rem;
         }
 
-        .bio-content p
+        .bio-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .training-item {
+            background: var(--gray);
+            padding: 15px;
+            border-radius: 8px;
+            font-weight: bold;
+            border-bottom: 3px solid var(--baby-blue);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .drafting-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .draft-card {
+            background: var(--gray);
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .draft-img-placeholder {
+            height: 180px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-weight: bold;
+        }
+
+        .btn-container { text-align: center; padding: 20px 0 60px; }
+
+        .btn-home {
+            display: inline-block
