@@ -162,4 +162,83 @@
         .btn-container { text-align: center; padding: 20px 0 60px; }
 
         .btn-home {
-            display: inline-block
+            display: inline-block;
+            padding: 16px 40px;
+            background: var(--black);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border: 2px solid var(--baby-blue);
+            transition: 0.3s ease;
+        }
+
+        .btn-home:hover { background: var(--baby-blue); color: var(--black); }
+
+        footer { width: 100%; text-align: center; padding: 3rem; color: #999; font-size: 0.8rem; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="index.html#record">Stats</a>
+    <a href="#gallery">Gallery</a>
+    <a href="index.html#academics">Academics</a>
+</nav>
+
+<header>
+    <h1>Angel Reeves</h1>
+    <p>Accelerated Class of 2027 | Student-Athlete</p>
+</header>
+
+<div class="container">
+    
+    <div class="profile-img-container">
+        <img src="profile.jpg" alt="Angel Reeves" class="profile-img">
+    </div>
+
+    <section>
+        <h2>Tactical Mindset</h2>
+        <div class="bio-content">
+            <p>With 12 years on the mat, I have learned that wrestling and architecture both require a strong foundation and technical precision. I am a calculated wrestler who focuses on leverage and strategy to win high-pressure matches.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Training & Style</h2>
+        <div class="training-grid">
+            <div class="training-item"><span>Style:</span> <span>Folkstyle / FS</span></div>
+            <div class="training-item"><span>Focus:</span> <span>Counter-Wrestling</span></div>
+            <div class="training-item"><span>Status:</span> <span>Year-Round</span></div>
+            <div class="training-item"><span>Goal:</span> <span>NCAA Prospect</span></div>
+        </div>
+    </section>
+
+    <section id="gallery">
+        <h2>Architectural Vision</h2>
+        <div class="drafting-gallery">
+            <div class="draft-card">
+                <div class="draft-img-placeholder">SKETCH 1</div>
+                <div style="padding: 10px; font-weight: bold;">Hand Sketches</div>
+            </div>
+            <div class="draft-card">
+                <div class="draft-img-placeholder">DRAFT 2</div>
+                <div style="padding: 10px; font-weight: bold;">CAD Modeling</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="btn-container">
+        <a href="index.html" class="btn-home">← Back to Recruiting Stats</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; 2026 Angel Reeves Portfolio.
+</footer>
+
+</body>
+</html>
